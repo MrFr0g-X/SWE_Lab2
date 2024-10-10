@@ -10,7 +10,8 @@ def index():
 def process():
     name = request.form['name']
     age = request.form['age']
-    return f'Hello {name}, you are {age} years old!'
-
+    
+    message = f'Hello {name}, you are {age} years old!'
+    return render_template('results.html', message=message)
 if __name__ == '__main__':
     app.run(debug=True)
